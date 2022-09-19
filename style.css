@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: hsl(257, 40%, 49%);
+    --button-color: hsl(300, 69%, 71%);
+    --header-color: hsl(0, 0%, 100%);
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--bg-color);
+}
+
+.huddle-landing-page {
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-color);
+    background-image: url("images/bg-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header img {
+    padding: 3.375em 0em 0em 3.375em;
+    scale: 0.8;    
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 4.625em 6.5em 0.625em 4.625em;
+    color: var(--header-color);
+}
+
+.description {
+    padding-left: 3.125em;
+    text-align: start;
+}
+
+.description h1 {
+    margin-top: 2.625em;
+    font-size: 2.375rem;
+    font-weight: 600;
+    color: var(--header-color);
+    font-family: 'Poppins', sans-serif;
+}
+
+.description p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.125rem;
+    margin-top: 1.5em;
+    font-weight: 400;
+}
+
+.description button {
+    background-color: var(--header-color);
+    color: var(--bg-color);
+    border: none;
+    padding: 0.9375em 4em;
+    font-size: 1.125rem;
+    border-radius: 2rem;
+    margin-top: 1.625em;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.description button:hover {
+    background-color: var(--button-color);
+    color: var(--header-color);
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-right: 4.375em;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--header-color);
+    border: 1px solid var(--header-color);
+    border-radius: 50%;
+    padding: 0.625em;
+    margin: 0.625em;
+}
+
+footer a:hover {
+    border: 1px solid var(--button-color);
+    color: var(--button-color);
+}
+
+footer i {
+    font-size: 1.25rem;
+}
+
+@media screen and (max-width: 1450px) {
+    .huddle-landing-page {
+        background-size: auto;
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .main-content {
+        padding-right: 0.625em;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .huddle-landing-page {
+        background-image: url("images/bg-mobile.svg");
+        background-size: cover;
+    }
+
+    .main-content {
+        grid-template-columns: auto;
+        padding: 1.25em 0em;
+    }
+
+    .image-container {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .image-container img {
+        width: 50%;
+        height: auto;
+    }
+
+    .description {
+        padding: 0em 5em;
+        text-align: center;
+    }
+
+    footer {
+        justify-content: center;
+        margin: 0;
+        padding-top: 1.875em;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .image-container img {
+        width: 80%;
+    }
+
+    header img {
+        scale: 0.6;
+        padding: 0.625em 0em 0em 0em;
+    }
+
+    .description {
+        padding: 0.625em 1.25em;
+    }
+
+    .description h1 {
+        font-size: 1.5rem;
+    }
+
+    .description p {
+        font-size: 0.9375rem;
+    }
+
+    .description button {
+        padding: 0.75em 0em;
+        width: 80%;
+        font-size: 0.9375rem;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .huddle-landing-page {
+        background-size: contain;
+    }
+}
